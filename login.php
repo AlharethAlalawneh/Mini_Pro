@@ -39,16 +39,47 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>Login</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .wrapper {
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.32);
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.36);
+        }
+        button{
+            background-color: #B139B7;
+            border: none;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+      button a {
+        color: #ffffff;
+      }
+    </style>
 <body>
     
-    <h1>Login</h1>
-    
+   
+<section class="wrapper">
     <?php if ($is_invalid): ?>
         <em>Invalid login</em>
     <?php endif; ?>
     
     <form method="post">
+    <h1 style="color: white;">Login</h1>
         <label for="email">email</label>
         <input type="email" name="email" id="email"
                value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
@@ -56,8 +87,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <label for="password">Password</label>
         <input type="password" name="password" id="password">
         
-        <button>Log in</button>
+        <button style="color: #ffffff;">Log in</button>
+        <div class="remember-forgot">
+            <label><input type="checkbox">Remember me </label>
+            <div class="login-register">
+                <p>Don't have an account? <a href="signup.html" class="register-link" style="color: rgb(215, 207, 207);">Sign up</a> </p>
+                
+
+            </div>
+        </div>
     </form>
-    
+</section>
 </body>
 </html>

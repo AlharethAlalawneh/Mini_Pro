@@ -4,12 +4,43 @@
     <title>Signup</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
     <script src="/js/validation.js" defer></script>
 </head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    .wrapper {
+        padding: 35px;
+        margin-top: -39px;
+        background-color: rgba(255, 255, 255, 0.32);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.36);
+    }
+    button{
+            background-color: #B139B7;
+            border: none;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+      button a {
+        color: #ffffff;
+      }
+</style>
 <body>
-    
-    <h1>Signup</h1>
+    <section class="wrapper">
+    <h1 style="color: white;">Signup</h1>
     
     <form action="process-signup.php" method="post" id="signup" novalidate>
         <div>
@@ -49,8 +80,11 @@
               </label>
         </div>
 
-        <button>Sign up</button>
+        <button style="color: rgb(255, 255, 255);">Sign up</button>
+        <div class="remember-forgot">
+            <label><input type="checkbox">Remember me </label> <br>
+           <p>Have an account? <a href="login.php" style="color: rgb(215, 207, 207);">Loge in</a></p>
     </form>
-    
+</section>
 </body>
 </html>
